@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+
+<body>
+    <script>
+        const socket = io("http://localhost:8002");
+
+        socket.on("connect", () => {
+            console.log("Connected:", socket.id);
+            socket.emit("chat_message", { message: "Hello! who are you?" });
+        });
+
+        socket.on("message", (data) => {
+            console.log("Server reply:", data);
+        });
+    </script>
+</body>
+
+</html>

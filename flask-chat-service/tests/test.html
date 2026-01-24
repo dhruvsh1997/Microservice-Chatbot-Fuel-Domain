@@ -11,7 +11,7 @@
 
         socket.on("connect", () => {
             console.log("Connected:", socket.id);
-            socket.emit("chat_message", { message: "Hello, who are you?" });
+            socket.emit("chat_message", { message: "Hello! who are you?" });
         });
 
         socket.on("message", (data) => {

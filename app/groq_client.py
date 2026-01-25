@@ -1,5 +1,6 @@
 import requests
 from app.config import Config
+#Main Chat Inference
 class GroqClient:
     def __init__(self):
         self.api_key = Config.GROQ_API_KEY

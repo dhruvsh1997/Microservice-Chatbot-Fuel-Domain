@@ -1,5 +1,5 @@
 FROM python:3.11-slim
-
+#directory selection 
 WORKDIR /app
 
 COPY requirements.txt .
